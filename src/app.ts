@@ -1,7 +1,9 @@
-import {Server} from '@hapi/hapi'
-import {routes} from './routes/user.routes'
+import { Server } from '@hapi/hapi'
+// import { routes } from './routes/user.routes'
+import { routes } from './modules/User/routes'
+import './database'
 
-export const init =async () => {
+const init = async () => {
     const server: Server = new Server({
         port: 8080,
         host: 'localhost'
@@ -12,3 +14,5 @@ export const init =async () => {
     await server.start()
     console.log(`server running on ${server.info.uri}`)
 }
+
+init();

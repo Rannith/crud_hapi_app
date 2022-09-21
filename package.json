@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "npm run dev",
     "dev": "nodemon -e ts --exec \"npm run buildrun \"",
-    "build" : "tsc",
-    "buildrun" : "npm run build && node ./dist/index.js",
+    "build": "tsc",
+    "buildrun": "npm run build && node ./dist/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -14,10 +15,12 @@
   "license": "ISC",
   "dependencies": {
     "@hapi/hapi": "^20.2.2",
+    "joi": "^17.6.0",
     "mongoose": "^6.1.0"
   },
   "devDependencies": {
     "@types/hapi__hapi": "^20.0.12",
+    "@types/joi": "^17.2.3",
     "@types/mongoose": "^5.11.97",
     "@types/node": "^18.7.18",
     "nodemon": "^2.0.19",
